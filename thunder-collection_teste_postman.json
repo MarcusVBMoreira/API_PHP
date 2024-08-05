@@ -1,0 +1,77 @@
+{
+    "info": {
+        "name": "teste",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "GET",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/API_PHP/api.php",
+                    "path": [
+                        "API_PHP",
+                        "api.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "PUT",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost/API_PHP/api.php",
+                    "path": [
+                        "API_PHP",
+                        "api.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "POST",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost/API_PHP/api.php",
+                    "path": [
+                        "API_PHP",
+                        "api.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "DELETE",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost/API_PHP/api.php",
+                    "path": [
+                        "API_PHP",
+                        "api.php"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        }
+    ]
+}
