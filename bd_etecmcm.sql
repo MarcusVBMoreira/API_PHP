@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Jul-2024 às 16:11
+-- Tempo de geração: 06-Ago-2024 às 14:31
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -36,6 +36,14 @@ CREATE TABLE `alunos` (
   `fk_cursos_id_curso` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `alunos`
+--
+
+INSERT INTO `alunos` (`id`, `nome`, `email`, `fk_cursos_id_curso`) VALUES
+(1, 'FULANO', 'fulano@email.com', 3),
+(2, 'BELTRANO', 'beltrano@email.com', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +54,16 @@ CREATE TABLE `cursos` (
   `id_curso` int(11) NOT NULL,
   `nome_curso` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `cursos`
+--
+
+INSERT INTO `cursos` (`id_curso`, `nome_curso`) VALUES
+(1, 'INFORMÁTICA'),
+(2, 'QUÍMICA'),
+(3, 'ADMINISTRAÇÃO'),
+(4, 'CONTABILIDADE');
 
 --
 -- Índices para tabelas despejadas
@@ -72,13 +90,13 @@ ALTER TABLE `cursos`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restrições para despejos de tabelas
