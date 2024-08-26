@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06-Ago-2024 às 14:31
+-- Tempo de geração: 26-Ago-2024 às 16:06
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `etecmcm`
 --
-CREATE DATABASE IF NOT EXISTS `etecmcm` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `etecmcm`;
 
 -- --------------------------------------------------------
 
@@ -42,7 +40,8 @@ CREATE TABLE `alunos` (
 
 INSERT INTO `alunos` (`id`, `nome`, `email`, `fk_cursos_id_curso`) VALUES
 (1, 'FULANO', 'fulano@email.com', 3),
-(2, 'BELTRANO', 'beltrano@email.com', 1);
+(2, 'BELTRANO', 'beltrano@email.com', 1),
+(3, 'Marcus Moreira', 'moreira.marcus.vb@gmail.com', 3);
 
 -- --------------------------------------------------------
 
@@ -63,7 +62,8 @@ INSERT INTO `cursos` (`id_curso`, `nome_curso`) VALUES
 (1, 'INFORMÁTICA'),
 (2, 'QUÍMICA'),
 (3, 'ADMINISTRAÇÃO'),
-(4, 'CONTABILIDADE');
+(4, 'CONTABILIDADE'),
+(5, 'GASTRONOMIA');
 
 --
 -- Índices para tabelas despejadas
@@ -90,13 +90,13 @@ ALTER TABLE `cursos`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para despejos de tabelas

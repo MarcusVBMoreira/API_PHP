@@ -1,19 +1,20 @@
 {
     "info": {
-        "name": "teste",
+        "name": "ROTAS",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": ""
     },
     "item": [
         {
-            "name": "GET",
+            "name": "GET ALUNOS",
             "request": {
                 "method": "GET",
                 "url": {
-                    "raw": "http://localhost/API_PHP/api.php",
+                    "raw": "http://localhost/api_php/api.php/alunos",
                     "path": [
-                        "API_PHP",
-                        "api.php"
+                        "api_php",
+                        "api.php",
+                        "alunos"
                     ],
                     "protocol": "http",
                     "host": [
@@ -23,14 +24,16 @@
             }
         },
         {
-            "name": "PUT",
+            "name": "GET ALUNOS ID",
             "request": {
-                "method": "PUT",
+                "method": "GET",
                 "url": {
-                    "raw": "http://localhost/API_PHP/api.php",
+                    "raw": "http://localhost/api_php/api.php/alunos/1",
                     "path": [
-                        "API_PHP",
-                        "api.php"
+                        "api_php",
+                        "api.php",
+                        "alunos",
+                        "1"
                     ],
                     "protocol": "http",
                     "host": [
@@ -40,14 +43,59 @@
             }
         },
         {
-            "name": "POST",
+            "name": "GET CURSOS",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/api_php/api.php/cursos",
+                    "path": [
+                        "api_php",
+                        "api.php",
+                        "cursos"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "GET CURSOS ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost/api_php/api.php/cursos/1",
+                    "path": [
+                        "api_php",
+                        "api.php",
+                        "cursos",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "POST CURSOS",
             "request": {
                 "method": "POST",
                 "url": {
-                    "raw": "http://localhost/API_PHP/api.php",
+                    "raw": "http://localhost/api_php/api.php/cursos?nome_curso=GASTRONOMIA",
+                    "query": [
+                        {
+                            "key": "nome_curso",
+                            "value": "GASTRONOMIA"
+                        }
+                    ],
+                    "variable": [],
                     "path": [
-                        "API_PHP",
-                        "api.php"
+                        "api_php",
+                        "api.php",
+                        "cursos"
                     ],
                     "protocol": "http",
                     "host": [
@@ -57,19 +105,56 @@
             }
         },
         {
-            "name": "DELETE",
+            "name": "POST ALUNOS",
             "request": {
-                "method": "DELETE",
+                "method": "POST",
                 "url": {
-                    "raw": "http://localhost/API_PHP/api.php",
+                    "raw": "http://localhost/api_php/api.php/alunos",
                     "path": [
-                        "API_PHP",
-                        "api.php"
+                        "api_php",
+                        "api.php",
+                        "alunos"
                     ],
                     "protocol": "http",
                     "host": [
                         "localhost"
                     ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"fk_cursos_id_curso\":3,\n  \"nome\":\"Marcus\",\n  \"email\":\"moreira.marcus.vb@gmail.com\"\n}"
+                }
+            }
+        },
+        {
+            "name": "PUT ALUNOS",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost/api_php/api.php/alunos",
+                    "path": [
+                        "api_php",
+                        "api.php",
+                        "alunos"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ]
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"id\": 3,\n  \"nome_novo\":\"Marcus Moreira\",\n  \"email_novo\":\"moreira.marcus.vb@gmail.com\"\n}"
                 }
             }
         }
