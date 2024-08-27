@@ -198,7 +198,7 @@
         //Precisa enviar todos os dados que serem autalizados (nome_curso,  etc)
         //Aqui pode ser pensada vários tipos de lógica, como por exemplo se somente um destes campos virem preenchidos. Para este exemplo vamos pensar que todos os campos serão preenchidos, com ou sem alterações
         
-        $input = json_decode(file_get_contents('put://input'), true);
+        $input = json_decode(file_get_contents('php://input'), true);
         $id_curso = $input['id_curso'];
         $nome_curso_novo = $input['nome_curso_novo'];
 
@@ -234,11 +234,11 @@
         }
     }
     //REMOVE curso
-    function remove_cruso(){
+    function remove_curso(){
         //ógica idem, atualiza, mas aqui precisamos somente do id
         global $conexao;
         $input = json_decode(file_get_contents('php://input'), true);
-        $id = $input['id_curso'];
+        $id_curso = $input['id_curso'];
         $sql = "DELETE FROM cursos WHERE id_curso = '$id_curso'";
         if($conexao->query($sql) == TRUE){
             echo json_encode([
