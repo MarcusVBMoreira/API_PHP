@@ -77,7 +77,7 @@
                                                                         echo "</tr>";            
                                                                     }
                                                                 } else {
-                                                                    echo '<p>Nenhum curso encontrado.</p>';
+                                                                    echo '<p>Nenhum aluno encontrado.</p>';
                                                                 }
                                                             ?>                                                                    
                                                             </tbody>

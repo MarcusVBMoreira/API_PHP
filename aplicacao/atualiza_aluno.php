@@ -68,12 +68,8 @@
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label class="form-label">Email novo do aluno</label>
-                                                                <input type="text" name="nome_novo_aluno" value="<?php echo $data['dados']['email']; ?>" class="form-control">                                                                
-                                                            </div> 
-                                                            <div class="mb-3">
-                                                                <label class="form-label">Id curso novo do aluno</label>
-                                                                <input type="text" name="nome_novo_aluno" value="<?php echo $data['dados']['fk_cursos_id_curso']; ?>" class="form-control">                                                                
-                                                            </div>                                                          
+                                                                <input type="text" name="email_novo_aluno" value="<?php echo $data['dados']['email']; ?>" class="form-control">                                                                
+                                                            </div>                                                        
                                                             <button type="submit" class="btn btn-primary">Atualizar</button>
                                                         </form>
                                                     </div>
