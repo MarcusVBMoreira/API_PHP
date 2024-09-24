@@ -2,9 +2,10 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_GET['id'];
         $nome_aluno_novo = $_POST['nome_novo_aluno'];
-        $email_novo_aluno = $_POST['email_novo_aluno'];
+        $email_aluno_novo = $_POST['email_novo_aluno'];
+        $curso_aluno_novo = $_POST['curso_novo_aluno'];
 
-        $data = array("id" => $id , "nome_novo" => $nome_aluno_novo, "email_novo" => $email_novo_aluno);
+        $data = array("id" => $id , "nome_novo" => $nome_aluno_novo, "email_novo" => $email_aluno_novo, "fk_cursos_id_curso" => $curso_novo_aluno);
         $options = array(
             'http' => array(
                 'header'  => "Content-type: application/json\r\n",

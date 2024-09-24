@@ -47,7 +47,7 @@
                                             <div class="col-xl-12">
                                                 <div class="row">
                                                     <div class="col-xl-8 col-md-10 m-auto">
-                                                        <h2>Insere novo Aluno</h2>
+                                                        <h2>Atualiza Aluno</h2>
                                                         <?php
                                                             $id = $_GET['id']; // Converte o valor para inteiro
                                                             //echo "ID ==> $id";
@@ -69,6 +69,26 @@
                                                             <div class="mb-3">
                                                                 <label class="form-label">Email novo do aluno</label>
                                                                 <input type="text" name="email_novo_aluno" value="<?php echo $data['dados']['email']; ?>" class="form-control">                                                                
+                                                            </div>
+                                                            <div>
+                                                                <label class="form-label">Curso</label>
+                                                                <?php
+                                                                    $url = 'http://localhost/api_php/api.php/cursos';
+                                                                    $response = file_get_contents($url);
+                                                                    $cursos = json_decode($response, true);
+
+                                                                    if (isset($cursos['dados'])) {
+                                                                        echo '<select class="form-select" id="cursos-dropdown" name="curso_novo_aluno" required>';
+                                                                        foreach ($cursos['dados'] as $curso) {
+                                                                            $selected = ($curso['id_curso'] == $data['dados']['fk_cursos_id_curso']) ? 'selected' : '';
+                                                                            echo '<option value="' . $curso['id_curso'] . '" ' . $selected . '>' . htmlspecialchars($curso['nome_curso']) . '</option>';
+                                                                        }
+                                                                        echo '</select>';
+                                                                    } else {
+                                                                        echo '<p>Nenhum curso encontrado.</p>';
+                                                                    }
+                                                                ?>
+                                                                </select>
                                                             </div>                                                        
                                                             <button type="submit" class="btn btn-primary">Atualizar</button>
                                                         </form>

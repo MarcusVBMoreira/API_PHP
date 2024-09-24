@@ -25,7 +25,7 @@
                 alert('Operação concluída com sucesso!');
 
                 // Após o usuário clicar em "OK", redireciona para outra página
-                window.location.href = 'lista_ALUNOS.php'; // Altere para a página de destino
+                window.location.href = 'lista_alunos.php'; // Altere para a página de destino
             </script>
         <?php
         }
